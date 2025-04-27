@@ -16,13 +16,13 @@ servo2_state = False
 
 while True:
     servo_motor.duty(duty_45)
-    Buzz.on()
+    Buzz.value(1)
     time.sleep(0.5)
-    Buzz.off()
+    Buzz.value(0)
     time.sleep(0.5)
     servo_motor.duty(duty_0)
 
-    for i in range(30):
+    for i in range(15):
         if servo2_state:
             servo_motor2.duty(duty_0)
         else:
